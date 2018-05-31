@@ -13,6 +13,7 @@ class ProgrammatiqueController: UIViewController {
     var monPremierUIView: UIView?
     var monPremierLabel : UILabel?
     var monPremierBouton: UIButton?
+    var maPremierIV: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class ProgrammatiqueController: UIViewController {
         monPremierLabel?.textAlignment = .left
         view.addSubview(monPremierLabel!)
         
-        monPremierBouton = UIButton(frame: CGRect(x: view.frame.width/2 - 75, y: monPremierLabel!.frame.maxY + 20, width: 150, height: 40))
+        monPremierBouton = UIButton(frame: CGRect(x: view.frame.width/2 - 75, y: monPremierLabel!.frame.maxY + 220, width: 150, height: 40))
         monPremierBouton?.setTitle("Appuyez", for: .normal)
         monPremierBouton?.tintColor = UIColor.red
         monPremierBouton?.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -40,8 +41,25 @@ class ProgrammatiqueController: UIViewController {
         
         monPremierBouton?.addTarget(self, action: #selector(boutonAppuye), for: .touchUpInside)
         
+        let largeur = view.frame.width - 60
+        let rectICV = CGRect(x: 30, y: (view.frame.height / 2) - (largeur / 2), width: largeur, height: largeur)
+        maPremierIV = UIImageView(frame: rectICV)
+        //maPremierIV?.image = #imageLiteral(resourceName: "codabee")
+        maPremierIV?.image = UIImage(named: "codabee")
+        maPremierIV?.contentMode = .scaleAspectFill
+        maPremierIV?.clipsToBounds = true
+        maPremierIV?.layer.cornerRadius = maPremierIV!.frame.width / 2
+        view.addSubview(maPremierIV!)
         
+        //view.sendSubview(toBack: maPremierIV!)
+        view.bringSubview(toFront: monPremierBouton!)
         
+        maPremierIV?.isUserInteractionEnabled = true
+        maPremierIV?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageAppuye)))
+    }
+    
+    @objc func imageAppuye() {
+        print("Image touchée")
     }
     
     @objc func boutonAppuye() {
@@ -50,3 +68,12 @@ class ProgrammatiqueController: UIViewController {
     }
 
 }
+
+
+
+
+
+
+
+
+
