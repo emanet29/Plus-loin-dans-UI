@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oJP-YG-TVz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oJP-YG-TVz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Item 2-->
         <scene sceneID="hf7-iD-5ap">
             <objects>
-                <viewController id="FFB-OM-QTx" sceneMemberID="viewController">
+                <viewController id="FFB-OM-QTx" customClass="ProgrammatiqueController" customModule="Plus_loin_dans_UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NQz-iE-SSz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,14 +29,24 @@
         <!--Item 1-->
         <scene sceneID="Upr-wB-edg">
             <objects>
-                <viewController id="BNs-3C-dUR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3Kc-77-0IL">
+                <viewController id="BNs-3C-dUR" customClass="CycleEtFrameController" customModule="Plus_loin_dans_UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Kc-77-0IL" customClass="Cy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9V4-MB-lhR">
+                                <rect key="frame" x="67" y="137" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.70779309099999999" green="1" blue="0.46651356170000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Aez-mw-NTY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="cl0-Il-ELc"/>
+                    <connections>
+                        <outlet property="vueFrameEtBounds" destination="9V4-MB-lhR" id="idz-IJ-ghf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrS-48-uRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
