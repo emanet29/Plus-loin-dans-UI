@@ -56,6 +56,8 @@ class ProgrammatiqueController: UIViewController {
         
         maPremierIV?.isUserInteractionEnabled = true
         maPremierIV?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageAppuye)))
+        
+        
     }
     
     @objc func imageAppuye() {
