@@ -17,14 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="NQz-iE-SSz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXv-N8-p6W">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.3710793168" green="0.56171544250000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iXv-N8-p6W" firstAttribute="bottom" secondItem="g8I-Jo-EZS" secondAttribute="bottom" id="ONH-VR-ru2"/>
+                            <constraint firstItem="iXv-N8-p6W" firstAttribute="leading" secondItem="g8I-Jo-EZS" secondAttribute="leading" id="x0G-Xh-u8Y"/>
+                            <constraint firstItem="iXv-N8-p6W" firstAttribute="trailing" secondItem="g8I-Jo-EZS" secondAttribute="trailing" id="z0p-hR-KaB"/>
+                            <constraint firstItem="iXv-N8-p6W" firstAttribute="top" secondItem="NQz-iE-SSz" secondAttribute="top" id="zC9-GZ-f3M"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g8I-Jo-EZS"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="ZRm-Vx-Ce7"/>
+                    <connections>
+                        <outlet property="scroll" destination="iXv-N8-p6W" id="28g-uV-Fxv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0N6-92-0W3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="45"/>
+            <point key="canvasLocation" x="53.600000000000001" y="44.527736131934034"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="Upr-wB-edg">
